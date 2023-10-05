@@ -11,7 +11,7 @@
 	<style>
 
         #form{
-            width: 1200px;
+            width: 1150px;
         }
 
 		table {
@@ -120,7 +120,7 @@
 		
 		
 		// 마커 이미지의 이미지 주소입니다
-		var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+		var imageSrc = "http://t1.daumcdn.net/localimg/localimages/07/2018/pc/img/marker_spot.png"; 
 		    
 		for (var i = 0; i < positions.length; i ++) {
 		    

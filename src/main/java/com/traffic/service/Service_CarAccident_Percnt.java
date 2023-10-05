@@ -43,7 +43,7 @@ public class Service_CarAccident_Percnt implements Interface_TrafficService{
 		}
 		else {
 			
-			String searchAgeCd = request.getParameter("searchAgeCd") != null ? request.getParameter("searchAgeCd") : "12ÏÑ∏Ïù¥Ìïò";
+			String searchAgeCd = request.getParameter("searchAgeCd") != null ? request.getParameter("searchAgeCd") : "12ºº¿Ã«œ";
 			
 			List<DTO_Traffic_CarAccident> searchAge = dao.searchAgeType();
 			List<DTO_Traffic_CarAccident> secondList = dao.searchAccidentAgeType(searchAgeCd);

@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.ui.Model;
 
 import com.traffic.dao.user.IDao_Notice;
+import com.traffic.dto.user.DTO_Notice;
 
 public class Service_N_review_write implements Interface_TrafficService {
 

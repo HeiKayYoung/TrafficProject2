@@ -30,6 +30,9 @@
 		table td:last-child {
 			border-right: 0;
 		}
+		.name{
+			font-size: 30px;
+		}
 		#map {
 			width:80%;
 			height:600px; 
@@ -95,10 +98,10 @@
 	
 	<table>
 		<tr>
-			<td><a href="#"><img src="resources/img/MyPage.png" alt="#" ><br />남기문</a></td>
-			<td><a href="#"><img src="resources/img/MyPage.png" alt="#" ><br />송경미</a></td>
-			<td><a href="#"><img src="resources/img/MyPage.png" alt="#" ><br />신재환</a></td>
-			<td><a href="#"><img src="resources/img/MyPage.png" alt="#" ><br />임찬규</a></td>
+			<td><a class="name" href="user/caraccident_percnt"><img src="resources/img/MyPage.png" alt="#" ><br />남기문</a></td>
+			<td><a class="name" href="#"><img src="resources/img/MyPage.png" alt="#" ><br />송경미</a></td>
+			<td><a class="name" href="#"><img src="resources/img/MyPage.png" alt="#" ><br />신재환</a></td>
+			<td><a class="name" href="#"><img src="resources/img/MyPage.png" alt="#" ><br />임찬규</a></td>
 		</tr>
 	</table>
 	

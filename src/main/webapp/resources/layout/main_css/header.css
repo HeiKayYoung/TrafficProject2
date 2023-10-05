@@ -1,6 +1,6 @@
 /* 
-			제작 : 남기문 
-		    일자 : 2023. 09. 02
+			�젣�옉 : �궓湲곕Ц 
+		    �씪�옄 : 2023. 09. 02
 		*/
 
 @font-face {
@@ -10,7 +10,7 @@
     font-style: normal;
 }
 		
-/* 메인 스타일 */
+/* 硫붿씤 �뒪���씪 */
 
 body {
     background: white;
@@ -26,11 +26,11 @@ body {
 #sub_logo{
 	width: 65px;
 	height: 65px;
-	/* 오른쪽으로 간격 */
-	padding-right: 100px; 
+	/* �삤瑜몄そ�쑝濡� 媛꾧꺽 */
+	padding-right: 100px;
 }
 
-/* 상단바 네비게이션 스타일 */
+/* �긽�떒諛� �꽕鍮꾧쾶�씠�뀡 �뒪���씪 */
 
 #navigation { 
     background: white;
@@ -56,7 +56,7 @@ body {
     width: auto;
     text-decoration: none;
 }
-/* 오른쪽 로그인 스타일 */
+/* �삤瑜몄そ 濡쒓렇�씤 �뒪���씪 */
 
 .menu-etc a:hover{
     color: lightblue;

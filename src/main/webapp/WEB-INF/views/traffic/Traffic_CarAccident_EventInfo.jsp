@@ -14,13 +14,13 @@
 	<style>
 	
 		#form{
-			width: 1200px;
+			width: 1100px;
 		}
 		
 		table {
 		  border-collapse: separate;
 		  border-spacing: 0;
-		  width: 1200px;
+		  width: 1100px;
 		}
 		th, td {
 		  padding: 6px 15px;
@@ -239,7 +239,13 @@
 		                success : function(result){
 		                	
 		                	if(result == "ERROR_NO_CCTVINFO"){
+		                		
+		                		// 로딩중 제거
+			                	$("#map").css("display", "block");
+			                	$("#loading_form").css("display", "none");
+		                		
 		                		alert("해당 위치 근처의 CCTV정보가 없습니다.")
+		                		
 		                		return;
 		                	}
 		                	
@@ -314,7 +320,7 @@
         				<td>${li.type != 'null' ? li.type : "-"}</td>
 	        			<td>${li.eventType != 'null' ? li.eventType : "-"} / ${li.eventDetailType != 'null' ? li.eventDetailType : "-"}</td>
 	        			<!-- 링크 클릭시 지도정보 가져오고, 맨 위로 이동함 -->
-	        			<td><a href="javascript:clickData('','${li.coordX}','${li.coordY}'); location.replace('#');">${li.roadName != 'null' ? li.roadName : "-"} / ${li.roadNo != 'null' ? li.roadNo : "-"}</a></td>
+	        			<td><a href="javascript:clickData('','${li.coordX}','${li.coordY}'); $('#loading_form').css('display', 'none'); location.replace('#');">${li.roadName != 'null' ? li.roadName : "-"} / ${li.roadNo != 'null' ? li.roadNo : "-"}</a></td>
 	        			<td>${li.roadDrcType != 'null' ? li.roadDrcType : "-"}</td>
 	        			<td>${li.lanesBlocked != 'null' ? li.lanesBlocked : "-"}</td>
 	        			<td>${li.message != 'null' ? li.message : "-"}</td>

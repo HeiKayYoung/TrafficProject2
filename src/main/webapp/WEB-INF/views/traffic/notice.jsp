@@ -28,7 +28,7 @@ a {
 }
 
 .board_wrap {
-    width: 600px;
+    width: 1200px;
     margin: 10px auto;
 }
 
@@ -37,10 +37,11 @@ a {
 }
 
 .board_title strong {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .bt_wrap {
+	margin-right: 350px;
     margin-top: 30px;
     text-align: center;
 }
@@ -51,6 +52,7 @@ a {
     padding: 10px;
     border: 1px solid black;
     border-radius: 2px;
+    font-size: 20px;
 }
 .bt_wrap a:first-child {
     margin-left: 0;
@@ -62,17 +64,20 @@ a {
 }
 
 .board_list {
-    width: 100%;
+    width: 70%;
     border-top: 2px solid #000;
 }
 
 .board_list > div {
     border-bottom: 1px solid #ddd;
     font-size: 0;
+    padding-bottom: 20px;
 }
 
 .board_list > div.top {
     border-bottom: 1px solid #999;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 .board_list > div:last-child {
@@ -83,6 +88,7 @@ a {
     display: inline-block;
     text-align: center;
     font-size: 1.4rem;
+    padding-top: 10px;
 }
 
 .board_list > div.top > div {
@@ -91,11 +97,13 @@ a {
 
 .board_list .num {
     width: 10%;
+    font-size: 20px;
 }
 
 .board_list .title {
     width: 60%;
     text-align: left;
+    font-size: 20px;
 }
 
 .board_list .top .title {
@@ -108,10 +116,12 @@ a {
 
 .board_list .date {
     width: 20%;
+    font-size: 20px;
 }
 
 .board_list .count {
     width: 10%;
+    font-size: 20px;
 }
 
 .board_page {
@@ -316,14 +326,14 @@ a {
     		<br />
     		<span>
     			<c:if test="${empty keyword || keyword eq ''}">
-            		<input type="text" id="keyword" name="keyword" placeholder="검색어를 입력하세요" autocomplete="off">
+            		<input type="text" id="keyword" name="keyword" placeholder="검색어를 입력하세요" autocomplete="off" style="width: 300px; padding: 8px;">
             	</c:if>
                 <c:if test="${not empty keyword}">
-            		<input type="text" id="keyword" name="keyword" value="${keyword}" autocomplete="off">
+            		<input type="text" id="keyword" name="keyword" value="${keyword}" autocomplete="off" style="width: 300px; padding: 8px;">
             	</c:if>
     		</span>
     		<span>
-    			<input type="submit" class="button" value="검색" onclick="searchExecute();">
+    			<input type="submit" class="button" value="검색" onclick="searchExecute();" style="padding: 8px;">
     		</span>
     	</div>
     	</div>

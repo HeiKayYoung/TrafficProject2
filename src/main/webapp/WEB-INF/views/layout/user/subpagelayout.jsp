@@ -49,7 +49,7 @@
 				#content{
 					width: 1200px;
 					margin-left : 400px;
-				    margin-top: 50px;
+				    margin-top: 100px;
 				    border: 0px solid #bcbcbc;
 				    overflow: hidden;
 				    text-align: left;
@@ -79,9 +79,9 @@
 		</div>
 		
 		<!-- 하단 -->
-		<div id="footer">
+		<%-- <div id="footer">
 				<tiles:insertAttribute name="footer"/>
 		</div>
-	
+	 --%>
 </body>
 </html>
