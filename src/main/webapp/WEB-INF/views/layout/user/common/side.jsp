@@ -256,7 +256,7 @@
                            <a href="caraccident_eventinfo?type=all&eventType=acc" class="menu" id="info">실시간 교통사고 / 재난 정보</a> 
                         </div>
                      <li class="item">
-                        <h2 class="accordionTitle">지하철 정보 <span class="accIcon"></span></h2>
+                        <h2 class="accordionTitle">지하철 정보<span class="accIcon"></span></h2>
                         <div class="text">
                               <a href="ssafety_info" class="menu" id="info">지하철안전정보</a> <br><br>
                               <a href="sairquality" class="menu" id="info">지하철공기질</a> <br><br>
@@ -264,17 +264,15 @@
                         </div>
                      </li>
                      <li class="item">
-                        <h2 class="accordionTitle">
-                           신재환 <span class="accIcon"></span>
+                        <h2 class="accordionTitle">공영주차장 정보<span class="accIcon"></span>
                         </h2>
                         <div class="text">
-                            <a href="#" class="menu" id="info">신재환</a> <br><br>                   
-                            <a href="#" class="menu" id="info">신재환</a>                  
+                            <a href="parking" class="menu" id="info">공영주차장 정보</a> <br><br>                   
+                            <a href="map" class="menu" id="info">공영주차장 검색</a>                  
                         </div>
                      </li>
                      <li class="item">
-                        <h2 class="accordionTitle">
-                           임찬규 <span class="accIcon"></span>
+                        <h2 class="accordionTitle">자전거 정보<span class="accIcon"></span>
                         </h2>
                         <div class="text">
                            <a href="#" class="menu" id="info">임찬규</a> <br><br>

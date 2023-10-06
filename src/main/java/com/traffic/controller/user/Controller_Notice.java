@@ -19,6 +19,7 @@ import com.traffic.service.Interface_TrafficService;
 import com.traffic.service.Service_N_content;
 import com.traffic.service.Service_N_review_content;
 import com.traffic.service.Service_N_review_list;
+import com.traffic.service.Service_N_review_update;
 import com.traffic.service.Service_N_review_write;
 import com.traffic.service.Service_Notice;
 
@@ -94,6 +95,22 @@ public class Controller_Notice {
 		return "traffic/n_review_content";
 	}
 	
+	@RequestMapping("n_review_update_form")
+	public String n_review_update_form(Model model, HttpServletRequest request) {
+		
+		return "traffic/n_review_update_form";
+	}
+	
+	@RequestMapping("n_review_update")
+	public String n_review_update(Model model, HttpServletRequest request) {
+		
+		System.out.println("n_review_update");
+		trafficservice = new Service_N_review_update(sqlSession);
+		model.addAttribute("request", request);
+		trafficservice.execute(model);
+		
+		return "redirect:n_review_list";
+	}
 //	@RequestMapping("download")
 //	public String download(Model model, HttpServletRequest request,
 //			HttpServletResponse response) throws Exception {

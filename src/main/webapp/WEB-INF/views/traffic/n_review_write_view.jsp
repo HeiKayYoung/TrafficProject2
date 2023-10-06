@@ -60,10 +60,11 @@ a {
 .bt_wrap a.on {
     background: black;
     color: #fff;
+    margin-left: 350px;
 }
 
 .board_list {
-    width: 70%;
+    width: 100%;
     border-top: 2px solid #000;
 }
 
@@ -214,7 +215,7 @@ a {
 
 .board_write {
     border-top: 2px solid #000;
-    width: 800px;
+    width: 1200px;
 }
 
 .board_write .title,
@@ -322,7 +323,7 @@ a {
            <div class="title">
                 <dl>
                     <dt>제목</dt>
-                    <dd><input type="text" id="n_title" name="n_title" placeholder="제목을 입력해주세요"></dd>
+                    <dd><input type="text" id="n_title" name="n_title" placeholder="제목을 입력해주세요" autocomplete="off"></dd>
                 </dl>
            </div>
             <div class="cont">

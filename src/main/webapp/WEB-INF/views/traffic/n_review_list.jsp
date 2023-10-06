@@ -61,10 +61,11 @@ a {
 .bt_wrap a.on {
     background: black;
     color: #fff;
+    margin-left: 350px;
 }
 
 .board_list {
-    width: 70%;
+    width: 100%;
     border-top: 2px solid #000;
 }
 

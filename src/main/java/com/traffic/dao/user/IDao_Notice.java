@@ -15,4 +15,5 @@ public interface IDao_Notice {
 	public void uphit_review(String n_no);
 	public void n_review_write(String n_title, String n_content);
 	public DTO_Notice n_review_content(String n_no);
+	public void n_review_update(String n_no, String n_title, String n_content);
 }

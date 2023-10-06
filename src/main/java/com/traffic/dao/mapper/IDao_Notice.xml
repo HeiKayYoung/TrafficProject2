@@ -89,4 +89,8 @@
 		FROM   REVIEW
 		WHERE N_NO = #{param1}
 	</select>
+	<update id="n_review_update">
+		UPDATE REVIEW SET N_TITLE = #{param2}, N_CONTENT = #{param3}
+		WHERE N_NO = #{param1}
+	</update>
 </mapper>

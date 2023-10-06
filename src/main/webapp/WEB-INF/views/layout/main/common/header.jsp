@@ -202,7 +202,7 @@
             <div class="container">
                 <ul class="buttonlist">
                 	<li id="sub_logo" style="float: left;">
-                		<a href="/traffic/main" style="font-size: 40px"><img src="resources/img/LOGO.png" alt="logo" width="200" height="80"/></a>
+                		<a href="/traffic/main" style="font-size: 40px"><img src="resources/img/LOGO.png" alt="logo" width="300" height="90"/></a>
                 	</li>
                     <li class="menu-bar"><a href="#">교통데이터</a>
                         <ul>
@@ -213,10 +213,10 @@
                                 <button class="inner_button" type="button" onclick="siteLocation('');">지하철 정보</button>     
                             </li>
                             <li>    
-                                <button class="inner_button" type="button" onclick="siteLocation('');">지하철 정보</button>     
+                                <button class="inner_button" type="button" onclick="siteLocation('user/parking');">공영주차장 정보</button>     
                             </li>
                             <li>    
-                                <button class="inner_button" type="button" onclick="siteLocation('');">지하철 정보</button>     
+                                <button class="inner_button" type="button" onclick="siteLocation('');">자전거 정보</button>     
                             </li>
                         </ul>
                     </li>

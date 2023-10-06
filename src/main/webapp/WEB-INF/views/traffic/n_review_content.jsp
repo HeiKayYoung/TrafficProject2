@@ -59,6 +59,7 @@ a {
 .bt_wrap a.on {
     background: black;
     color: #fff;
+    margin-left: 350px;
 }
 
 .board_list {
@@ -334,6 +335,7 @@ a {
         </div>
         <div class="bt_wrap">
             <a href="n_review_list" class="on">후기목록</a>
+            <a href="n_review_update_form">후기수정</a>
         </div>
     </div>
 </body>
