@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet"	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="resources/css/user/s_info_disability_fac.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/user/s_info_disability_fac.css" />
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -96,7 +96,7 @@ for (var i = 0; i < emArr.length; i++) {
 	  statn_emPositions.push(latLng);
 }    
 
-var markerImageSrc = 'resources/img/subway_img/kakaoMapTestImg.png';  // 마커이미지의 주소입니다. 스프라이트 이미지 입니다
+var markerImageSrc = '${pageContext.request.contextPath }/resources/img/subway_img/kakaoMapTestImg.png';  // 마커이미지의 주소입니다. 스프라이트 이미지 입니다
     statn_evMarkers = [], // 엘리베이터 마커 객체를 가지고 있을 배열입니다
     statn_wlMarkers = [], // 휠체어 마커 객체를 가지고 있을 배열입니다
     statn_bfMarkers = []; // 유아수유방 마커 객체를 가지고 있을 배열입니다
@@ -364,7 +364,7 @@ function changeMarker(type){
 		</details>
 	<details open>
 		<summary>
-			<p>휠체어리프트 자세한 위치 정보  <img src="resources/img/subway_img/click.png" alt="clickIMG"  width="40"></p>
+			<p>휠체어리프트 자세한 위치 정보  <img src="${pageContext.request.contextPath }/resources/img/subway_img/click.png" alt="clickIMG"  width="40"></p>
 		</summary>
 
 		<div>

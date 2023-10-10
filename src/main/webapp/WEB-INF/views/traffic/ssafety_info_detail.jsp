@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="resources/css/user/subway_safety_info_detail.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/user/subway_safety_info_detail.css" />
 
 </head>
 
