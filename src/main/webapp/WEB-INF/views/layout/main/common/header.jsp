@@ -210,7 +210,7 @@
                                 <button class="inner_button" type="button" onclick="siteLocation('user/caraccident_percnt');">교통사고 정보</button>                                                    
                             </li>
                             <li>    
-                                <button class="inner_button" type="button" onclick="siteLocation('');">지하철 정보</button>     
+                                <button class="inner_button" type="button" onclick="siteLocation('user/s_info_disability_fac');">지하철 정보</button>     
                             </li>
                             <li>    
                                 <button class="inner_button" type="button" onclick="siteLocation('user/parking');">공영주차장 정보</button>     
