@@ -32,7 +32,7 @@ public class Service_N_review_content implements Interface_TrafficService {
 		
 		DTO_Notice dto = dao.n_review_content(n_no);
 		
-		model.addAttribute("dto", dto);
+		model.addAttribute("n_review_content", dto);
 	}
 
 }

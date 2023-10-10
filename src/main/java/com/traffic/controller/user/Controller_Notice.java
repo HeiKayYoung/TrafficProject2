@@ -98,6 +98,8 @@ public class Controller_Notice {
 	@RequestMapping("n_review_update_form")
 	public String n_review_update_form(Model model, HttpServletRequest request) {
 		
+		System.out.println("n_review_update_form");
+		
 		return "traffic/n_review_update_form";
 	}
 	

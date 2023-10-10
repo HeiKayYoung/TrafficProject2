@@ -62,6 +62,10 @@ a {
     margin-left: 350px;
 }
 
+.bt_wrap a.on:hover {
+	color: gray;
+}
+
 .board_list {
     width: 70%;
     border-top: 2px solid #000;
@@ -313,29 +317,29 @@ a {
     <div class="board_view_wrap">
         <div class="board_view">
             <div class="title">
-                ${dto.n_title }
+                ${n_review_content.n_title }
             </div>
             <div class="info">
                 <dl>
                     <dt>번호</dt>
-                    <dd>${dto.n_no }</dd>
+                    <dd>${n_review_content.n_no }</dd>
                 </dl>
                 <dl>
                     <dt>작성일</dt>
-                    <dt>${dto.n_date }</dt>
+                    <dt>${n_review_content.n_date }</dt>
                 </dl>
                 <dl>
                     <dt>조회수</dt>
-                    <dt>${dto.n_hit }</dt>
+                    <dt>${n_review_content.n_hit }</dt>
                 </dl>
             </div>
             <div class="cont">
-               ${dto.n_content }
+               ${n_review_content.n_content }
             </div>
         </div>
         <div class="bt_wrap">
             <a href="n_review_list" class="on">후기목록</a>
-            <a href="n_review_update_form">후기수정</a>
+<%--             <a href="n_review_update_form?n_no=${n_review_content.n_no }">후기수정</a> --%>
         </div>
     </div>
 </body>

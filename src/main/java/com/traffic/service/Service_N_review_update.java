@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.ui.Model;
 
 import com.traffic.dao.user.IDao_Notice;
+import com.traffic.dto.user.DTO_Notice;
 
 public class Service_N_review_update implements Interface_TrafficService {
 
@@ -29,7 +30,6 @@ public class Service_N_review_update implements Interface_TrafficService {
 		IDao_Notice dao = sqlSession.getMapper(IDao_Notice.class);
 		
 		dao.n_review_update(n_no, n_title, n_content);
-
 	}
 
 }

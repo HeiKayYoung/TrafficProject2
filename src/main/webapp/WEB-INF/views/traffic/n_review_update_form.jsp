@@ -17,6 +17,14 @@
     color: #fff;
     font-size: 20px;
 }
+
+#update:hover {
+	color: gray;
+}
+
+a:hover {
+	color: orange; 
+}
 </style>
 
 </head>
@@ -29,15 +37,15 @@
     </div>
     <div class="board_write_wrap">
         <div class="board_write">
-        <input type="hidden" name="n_no" value="${dto.n_no }" />
+        <input type="hidden" name="n_no" id="n_no" value="${n_review_content.n_no }" />
            <div class="title">
                 <dl>
                     <dt>제목</dt>
-                    <dd><input type="text" id="n_title" name="n_title"autocomplete="off">${dto.n_title }</dd>
+                    <dd><input type="text" id="n_title" name="n_title"autocomplete="off" value="${n_review_content.n_title }"></dd>
                 </dl>
            </div>
             <div class="cont">
-                <textarea id="n_content" name="n_content">${dto.n_content }</textarea>
+                <textarea id="n_content" name="n_content">${n_review_content.n_content }</textarea>
             </div>
         </div>
         <div class="bt_wrap">
