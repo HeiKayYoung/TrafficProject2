@@ -114,7 +114,7 @@
 				            ${ec_view.ec_charge_type}
 				        </c:when>
 				        <c:when test="${ec_view.ec_charge_type eq 'AC완속'}">
-				            <img alt="AC완속" src="resources/img/ac.png"><br />
+				            <img alt="AC완속" src="${pageContext.request.contextPath }/resources/img/ac.png"><br />
 				            ${ec_view.ec_charge_type}
 				        </c:when>
 				        <c:otherwise>
