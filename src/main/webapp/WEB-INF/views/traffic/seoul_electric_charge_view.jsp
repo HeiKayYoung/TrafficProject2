@@ -110,7 +110,7 @@
 				<td id="charger">
 				    <c:choose>
 				        <c:when test="${ec_view.ec_charge_type eq 'DC콤보'}">
-				            <img alt="DC콤보_충전기" src="resources/img/dc_combo.png"><br />
+				            <img alt="DC콤보_충전기" src="${pageContext.request.contextPath }/resources/img/dc_combo.png"><br />
 				            ${ec_view.ec_charge_type}
 				        </c:when>
 				        <c:when test="${ec_view.ec_charge_type eq 'AC완속'}">
@@ -118,7 +118,7 @@
 				            ${ec_view.ec_charge_type}
 				        </c:when>
 				        <c:otherwise>
-				        	<img alt="전기차충전기" src="resources/img/etc_charger.png" style="width: 500px; height: 300px;">
+				        	<img alt="전기차충전기" src="${pageContext.request.contextPath }/resources/img/etc_charger.png" style="width: 500px; height: 300px;">
 				        </c:otherwise>
 				    </c:choose>
 				</td>
