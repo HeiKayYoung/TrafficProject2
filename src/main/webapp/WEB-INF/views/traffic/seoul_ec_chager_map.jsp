@@ -109,6 +109,12 @@
 			margin-top: 5px;
 			margin-bottom: 5px;
 		}
+		#ECChart {
+			width: 1200px;
+			height: 500px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
 	</style>
 
 	<hr />
@@ -118,8 +124,8 @@
 	<div id="list-box">
 		<table>
 			<tr>
-				<td><a href="http://localhost:8090/traffic/user/map?">서울시 공영주차장</a></td>
-				<td><a href="http://localhost:8090/traffic/user/ec_map?">서울시 전기차 충전소</a></td>
+				<td><a href="map">서울시 공영주차장</a></td>
+				<td><a href="ec_map">서울시 전기차 충전소</a></td>
 			</tr>
 		</table>
 	</div>
@@ -362,7 +368,7 @@
 </script>
 
 <!-- 차트 -->
-	<canvas id="ECChart" width="1200" height="500"></canvas>
+	<canvas id="ECChart"></canvas>
 	<script>
     var EC_Charger_Data = JSON.parse('${arr}');
     console.log(EC_Charger_Data);

@@ -1,5 +1,6 @@
 package com.traffic.service;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +10,8 @@ import org.springframework.ui.Model;
 
 import com.traffic.dao.user.IDao_Seoul_Parking;
 import com.traffic.dto.user.DTO_Seoul_Ec_Charger;
+import com.traffic.dto.user.DTO_Seoul_Parking;
+import com.traffic.usetools.SearchVO;
 
 public class Seoul_Electric_charge_View_Service implements Interface_TrafficService {
 	
@@ -30,6 +33,10 @@ public class Seoul_Electric_charge_View_Service implements Interface_TrafficServ
 		System.out.println("title : "+title);
 		
 		DTO_Seoul_Ec_Charger ec_view = dao.ec_view(title);
+		
+		// �씠�쟾湲�, �떎�쓬湲�
+		DTO_Seoul_Ec_Charger ec_prev_next = dao.ec_prev_next(title);
+		model.addAttribute("ec_prev_next",ec_prev_next);
 		
 		model.addAttribute("ec_view",ec_view);
 		

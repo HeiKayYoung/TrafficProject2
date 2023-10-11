@@ -33,9 +33,6 @@ public class Seoul_Parking_Service implements Interface_TrafficService {
 		String searchType = request.getParameter("searchType") != null ? request.getParameter("searchType") : "1";
 		String keyword = request.getParameter("keyword")  != null &&  ! request.getParameter("keyword").equals("")
 				? request.getParameter("keyword") : "";
-		String sortBy = request.getParameter("sortBy") != null ? request.getParameter("sortBy") : "defaultSort";  // 湲곕낯媛믪� "defaultSort" �삉�뒗 �썝�븯�뒗 湲곕낯 �젙�젹媛믪쑝濡� �꽕�젙
-
-		System.out.println("sortBy: " + sortBy);
 
 		System.out.println("page : "+currentPage);
 		System.out.println("searchType : "+searchType);
@@ -45,7 +42,7 @@ public class Seoul_Parking_Service implements Interface_TrafficService {
 		vo.setPage(currentPage);
 		vo.pageCalculate(dao.seoul_parking_paging(searchType, keyword));
 		
-		List<DTO_Seoul_Parking> seoul_parking = dao.seoul_parking(vo.getRowStart(), vo.getRowEnd(), searchType, keyword, sortBy);
+		List<DTO_Seoul_Parking> seoul_parking = dao.seoul_parking(vo.getRowStart(), vo.getRowEnd(), searchType, keyword);
 		
 		model.addAttribute("vo", vo);
 		model.addAttribute("searchType",searchType);

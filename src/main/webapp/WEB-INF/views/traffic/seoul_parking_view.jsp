@@ -90,7 +90,7 @@
 		
 	
 	<h2>서울시 공영주차장 상세정보</h2>
-		<table>
+		<table id="parking_view">
 			<tr>
 				<td>이름</td>
 				<td>${seoul_parking_view.p_name }</td>
@@ -142,6 +142,13 @@
 				<td>
 					<c:choose>
 						<c:when test="${seoul_parking_view.p_week_open_time eq 0}">
+							주차장마다 상이함.
+						</c:when>
+						<c:when test="${seoul_parking_view.p_week_open_time eq 900 and seoul_parking_view.p_week_end_time eq 1900}">
+						    오전 9시 ~ 오후 7시
+						</c:when>
+						<c:when test="${seoul_parking_view.p_weekend_open_time eq 900 and seoul_parking_view.p_weekend_end_time eq 1900}">
+							오전 9시 ~ 오후 7시
 						</c:when>
 						<c:otherwise>
 							평일 : ${seoul_parking_view.p_week_open_time }~
@@ -160,49 +167,49 @@
 				<td>추가 시간 / 추가 요금</td>
 				<td>${seoul_parking_view.p_add_price_min }분 / ${seoul_parking_view.p_add_price }원</td>
 			</tr>
+			
 			<tr>
 			    <td>약도</td>
 			    <td>
-			        <div id="mapContainer" style="width:500px;height:350px;"></div>
-			        <div id="noMapMessage" style="display:none;">약도없음</div>
+			        <div id="mapContainer"></div>
+			        <div id="noMapMessage">지도기능을 지원할 수 없습니다.</div>
 			        <script>
-			            var mapContainer = document.getElementById('mapContainer'); // 지도를 표시할 div 
-			            var noMapMessage = document.getElementById('noMapMessage'); // 약도없음 메시지를 표시할 div
+			            var mapContainer = document.getElementById('mapContainer');
+			            var noMapMessage = document.getElementById('noMapMessage');
 			            var latitude = ${seoul_parking_view.p_latitude};
 			            var hardness = ${seoul_parking_view.p_hardness};
 			            
-			            if (latitude == null || hardness == null) {
-			                // latitude 또는 hardness가 null이면 약도없음 표시
-			                noMapMessage.style.display = 'block';
-			            } else {
+			            if (latitude != null && hardness != null) {
+			            	mapContainer.style.width = '500px';
+			                mapContainer.style.height = '350px'; 
+			                
 			                var mapOption = { 
-			                    center: new kakao.maps.LatLng(latitude, hardness), // 지도의 중심좌표
-			                    level: 3 // 지도의 확대 레벨
+			                    center: new kakao.maps.LatLng(latitude, hardness),
+			                    level: 3
 			                };
 			                
-			                var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+			                var map = new kakao.maps.Map(mapContainer, mapOption);
 			                
-			                // 마커가 표시될 위치입니다 
 			                var markerPosition  = new kakao.maps.LatLng(latitude, hardness); 
 			                
-			                // 마커를 생성합니다
 			                var marker = new kakao.maps.Marker({
 			                    position: markerPosition
 			                });
 			                
-			                // 마커가 지도 위에 표시되도록 설정합니다
 			                marker.setMap(map);
 			                
-			                // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-			                // marker.setMap(null);    
+			                noMapMessage.style.display = 'none';
+			                
+			            } else {
+			            	mapContainer.style.display = 'none';
+			            	mapContainer.style.width = '0px';
+			                mapContainer.style.height = '0px'; 
 			            }
 			        </script>
 			    </td>
-			</tr>
-
-
-
+			</tr>		
 		</table>
+		
 		<div id="hr-container">
 			<hr />
 		</div>
@@ -211,11 +218,29 @@
 			<table id="pre_next_table">
 				<tr>
 					<td>이전글</td>
-					<td>${seoul_parking_view.p_name }</td>
+					<td>
+						<c:choose>
+							<c:when test="${prev_next.prevnum eq 0}">
+								<span style="color: gray;">이전글이 없습니다.</span>
+							</c:when>
+							<c:otherwise>
+								<span><a href="parking_view?no=${prev_next.prevnum }">${prev_next.prevtitle }</a></span>
+							</c:otherwise>
+						</c:choose>
+					</td>
 				</tr>
 				<tr>
 					<td>다음글</td>
-					<td>다음글</td>
+					<td>
+						<c:choose>
+							<c:when test="${prev_next.nextnum eq 0}">
+								<span style="color: gray;">다음글이 없습니다.</span>
+							</c:when>
+							<c:otherwise>
+								<span><a href="parking_view?no=${prev_next.nextnum }">${prev_next.nexttitle }</a></span>
+							</c:otherwise>
+						</c:choose>
+					</td>
 				</tr>
 			</table>
 		</div>		

@@ -51,4 +51,9 @@ public class DTO_Seoul_Parking {
 	private String p_latitude;
 	private String p_hardness;
 	
+	private int prevnum;
+	private String prevtitle;
+	private int nextnum;
+	private String nexttitle;
+	
 }

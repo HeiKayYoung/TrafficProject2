@@ -8,7 +8,7 @@ import com.traffic.dto.user.DTO_Seoul_Parking;
 
 public interface IDao_Seoul_Parking {
 
-	public List<DTO_Seoul_Parking> seoul_parking(Integer rowStart, Integer rowEnd, String searchType, String keyword, String sortBy);
+	public List<DTO_Seoul_Parking> seoul_parking(Integer rowStart, Integer rowEnd, String searchType, String keyword);
 
 	public Integer seoul_parking_paging(String searchType, String keyword);
 
@@ -27,5 +27,9 @@ public interface IDao_Seoul_Parking {
 	public List<Map<String, Object>> seoul_free_parking_chart();
 
 	public List<Map<String, Object>> seoul_not_free_parking_chart();
+
+	public DTO_Seoul_Parking prev_next(String no);
+
+	public DTO_Seoul_Ec_Charger ec_prev_next(String title);
 
 }

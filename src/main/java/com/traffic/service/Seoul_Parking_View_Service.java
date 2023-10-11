@@ -1,6 +1,5 @@
 package com.traffic.service;
 
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +9,6 @@ import org.springframework.ui.Model;
 
 import com.traffic.dao.user.IDao_Seoul_Parking;
 import com.traffic.dto.user.DTO_Seoul_Parking;
-import com.traffic.usetools.SearchVO;
 
 public class Seoul_Parking_View_Service implements Interface_TrafficService {
 	
@@ -32,6 +30,10 @@ public class Seoul_Parking_View_Service implements Interface_TrafficService {
 		System.out.println("no : "+no);
 		
 		DTO_Seoul_Parking seoul_parking_view = dao.seoul_parking_view(no);
+		
+		// �씠�쟾湲�, �떎�쓬湲�
+		DTO_Seoul_Parking prev_next = dao.prev_next(no);
+		model.addAttribute("prev_next",prev_next);
 		
 		String latitude = seoul_parking_view.getP_latitude();
 		String hardness = seoul_parking_view.getP_hardness();

@@ -141,59 +141,16 @@
  	<div id="list-box">
 		<table>
 			<tr>
-				<td><a href="http://localhost:8090/traffic/user/parking">서울시 공영주차장</a></td>
-				<td><a href="http://localhost:8090/traffic/user/electric_charge">서울시 전기차 충전소</a></td>
+				<td><a href="parking">서울시 공영주차장</a></td>
+				<td><a href="electric_charge">서울시 전기차 충전소</a></td>
 			</tr>
 		</table>
 	</div>
  	
- 	<div style="display: flex; justify-content: space-between; ">
-	    <div>
-	        <!-- <a href="#">주차대수 많은 순</a> | <a href="#">기본시간 많은 순</a> -->
-	        <button id="sortByParking">주차대수 많은 순</button> | <button id="sortByDefaultTime">기본시간 많은 순</button>
-	    </div>
 	    <div style="color : gray; text-align: right;">
 	        전체 페이지 : ${vo.totPage } / 현재 페이지 : ${vo.page } <br />
 	        * 본 게시판은 주차대수 10대 이상의 주차장만 조회한 결과입니다.
 	    </div>
-	</div>
-
-	<div id="result"></div>
-	
-	<script>
-	    $(document).ready(function () {
-	        // 주차대수 많은 순으로 정렬하는 버튼 클릭 이벤트
-	        $("#sortByParking").click(function () {
-	            sortBy("p_total_space");
-	        });
-	
-	        // 기본시간 많은 순으로 정렬하는 버튼 클릭 이벤트
-	        $("#sortByDefaultTime").click(function () {
-	            sortBy("p_default_time_min");
-	        });
-	
-	        // 정렬 기준에 따라 서버에 요청을 보내고 결과를 출력하는 함수
-	        function sortBy(sortKey) {
-	            $.ajax({
-	                type: "GET",
-	                url: "http://localhost:8090/TrafficProject/user/parking",
-	                data: {
-	                    param1: 1,
-	                    param2: 10,
-	                    sortBy: sortKey  // 변수를 사용하여 동적으로 값을 전달
-	                },
-	                success: function (data) {
-	                    // 서버에서 받은 데이터를 출력하거나 처리하는 부분
-	                    $("#result").html(data);
-	                },
-	                error: function (error) {
-	                    console.log("Error:", error);
-	                }
-	            });
-	        }
-	    });
-	</script>
-
 	
  		<table>
 	 		<tr>

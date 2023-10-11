@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 차트 -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@3.0.0"></script>
 
 
 <%-- <script src="${pageContext.request.contextPath}/resources/js/user/map.js"></script> --%>
@@ -112,17 +112,39 @@
 			margin-top: 5px;
 			margin-bottom: 5px;
 		}
+		#parkingChart{
+			width: 1200px;
+			height: 500px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		#parkingChart2{
+			width: 600px;
+			height: auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		#parkingChart3{
+			width: 600px;
+			height: auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
 	</style>
 
 	<hr />
 		<div class="title">주차장 검색하기</div>
 	<hr />
 	
+	 <div style="color : gray; display: flex;">
+        * 본 게시판은 주차대수 10대 이상의 주차장만 조회한 결과입니다.
+    </div>
+	
 	<div id="list-box">
 		<table>
 			<tr>
-				<td><a href="http://localhost:8090/traffic/user/map?">서울시 공영주차장</a></td>
-				<td><a href="http://localhost:8090/traffic/user/ec_map?">서울시 전기차 충전소</a></td>
+				<td><a href="map">서울시 공영주차장</a></td>
+				<td><a href="ec_map">서울시 전기차 충전소</a></td>
 			</tr>
 		</table>
 	</div>
@@ -365,7 +387,7 @@
 </script>
 
 	<!-- 차트 -->
-	<canvas id="parkingChart" width="1200" height="500"></canvas>
+	<canvas id="parkingChart"></canvas>
 	<script>
 	    var parkingData = JSON.parse('${arr}');
 	
@@ -386,7 +408,18 @@
 	            datasets: [{
 	                label: '주차장 갯수',
 	                data: parkingCounts,
-	                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+	                backgroundColor: [
+	            				'rgba(75, 192, 192, 0.2)',
+				                'rgba(0, 0, 255, 0.3)',
+			                	'rgba(60, 179, 113, 0.3)',
+			                	'rgba(238, 130, 238, 0.3)',
+			                	'rgba(255, 165, 0, 0.3)',
+			                	'rgba(0, 255, 71, 0.3)',
+			                	'rgba(255, 255, 71, 0.3)',
+			                	'rgba(64, 161, 42, 0.3)',
+			                	'rgba(215, 161, 42, 0.3)',
+			                	'rgba(215, 25, 42, 0.3)'
+			                	],
 	                borderColor: 'rgba(75, 192, 192, 1)',
 	                borderWidth: 1
 	            }]
@@ -398,14 +431,23 @@
 	                    beginAtZero: true
 	                }
 	            },
-	        }
+	        },
+	        plugins: {
+            	datalabels: {
+                    display: true,
+                    color: 'black', // 레이블 텍스트 색상
+                    font: {
+                        weight: 'bold'
+                    }
+                }
+            }
 	    });
 	   
 	</script>
 	
 	<div style="display:flex; margin-top: 10px; margin-bottom: 10px;">
 		<!-- 구 무료 주차장 갯수 -->
-		<canvas id="parkingChart2" width="600" height="500"></canvas>
+		<canvas id="parkingChart2"></canvas>
 		<script>
 		    var FreeparkingData = JSON.parse('${arr2}');
 		
@@ -420,7 +462,7 @@
 		    // 차트
 		    var ctx = document.getElementById('parkingChart2').getContext('2d');
 		    var chart = new Chart(ctx, {
-		        type: 'pie',
+		        type: 'line',
 		        data: {
 		            labels: free_labels,
 		            datasets: [{
@@ -450,20 +492,27 @@
 			                }
 			            },
 			            plugins: {
-			                legend: {
+			            	datalabels: {
+			                    display: true,
+			                    color: 'black', // 레이블 텍스트 색상
+			                    font: {
+			                        weight: 'bold'
+			                    }
+			                }
+			                /* legend: {
 			                    display: true, // 이 부분을 추가하여 레전드를 표시합니다.
 			                    position: 'top', // 레전드의 위치를 설정합니다. 필요에 따라 수정하세요.
 			                },
 			                tooltip: {
 			                    enabled: true // 툴팁을 표시하도록 설정합니다.
-			                }
+			                } */
 			            }
 			        }
 			    });
 		</script>
 		
 		<!-- 구 유료 주차장 갯수 -->
-		<canvas id="parkingChart3" width="600" height="500"></canvas>
+		<canvas id="parkingChart3"></canvas>
 		<script>
 		    var NotFreeparkingData = JSON.parse('${arr3}');
 		
@@ -511,6 +560,7 @@
 			        }
 			    });
 		    console.log(NotFreeparkingData);
+		    console.log(Chart.version);
 		</script>
 		
 	</div>

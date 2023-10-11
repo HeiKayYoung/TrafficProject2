@@ -212,7 +212,7 @@
                                 <button class="inner_button" type="button" onclick="siteLocation('parking');">공영주차장 정보</button>
                             </li>
 							<li>
-                                <button class="inner_button" type="button" onclick="siteLocation('');">임찬규</button>
+                                <button class="inner_button" type="button" onclick="siteLocation('use_year_bike');">자전거 정보</button>
 							</li>
                         </ul>
                     </li>

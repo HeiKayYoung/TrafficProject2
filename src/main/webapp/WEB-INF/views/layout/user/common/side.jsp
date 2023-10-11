@@ -275,8 +275,10 @@
                         <h2 class="accordionTitle">자전거 정보<span class="accIcon"></span>
                         </h2>
                         <div class="text">
-                           <a href="#" class="menu" id="info">임찬규</a> <br><br>
-                           <a href="#" class="menu" id="info">임찬규</a>
+                           <a href="use_year_bike" class="menu" id="info">사용자 현황</a> <br><br>
+                           <a href="new_mem23" class="menu" id="info">신규회원 현황</a> <br><br>
+                           <a href="install_bike" class="menu" id="info">대여소 설치현황</a> <br><br>
+                           <a href="how_to_ride" class="menu" id="info">자전거 타는 법</a>
                         </div>
                      </li>
                   </ul>

@@ -26,4 +26,9 @@ public class DTO_Seoul_Ec_Charger {
 	private String ec_facility2;
 	private String ec_note;
 	
+	private String prevnum;
+	private String prevtitle;
+	private String nextnum;
+	private String nexttitle;
+	
 }

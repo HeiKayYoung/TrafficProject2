@@ -216,7 +216,7 @@
                                 <button class="inner_button" type="button" onclick="siteLocation('user/parking');">공영주차장 정보</button>     
                             </li>
                             <li>    
-                                <button class="inner_button" type="button" onclick="siteLocation('');">자전거 정보</button>     
+                                <button class="inner_button" type="button" onclick="siteLocation('user/new_mem23');">자전거 정보</button>     
                             </li>
                         </ul>
                     </li>

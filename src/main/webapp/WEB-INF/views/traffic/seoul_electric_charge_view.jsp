@@ -75,9 +75,12 @@
     		color: #cbcbcb;
     		margin: 20px auto;
     	}
-    	#charger {
+    	#charger img{
     		width: 250px;
     		height: 200px;
+    	}
+    	#pre_next_table td:first-child{
+    		background-color: #f5f5f5;
     	}
 	</style>
 	
@@ -110,6 +113,13 @@
 				            <img alt="DC콤보_충전기" src="resources/img/dc_combo.png"><br />
 				            ${ec_view.ec_charge_type}
 				        </c:when>
+				        <c:when test="${ec_view.ec_charge_type eq 'AC완속'}">
+				            <img alt="AC완속" src="resources/img/ac.png"><br />
+				            ${ec_view.ec_charge_type}
+				        </c:when>
+				        <c:otherwise>
+				        	<img alt="전기차충전기" src="resources/img/etc_charger.png" style="width: 500px; height: 300px;">
+				        </c:otherwise>
 				    </c:choose>
 				</td>
 
@@ -171,6 +181,38 @@
 		<div id="hr-container">
 			<hr />
 		</div>
+		
+		<div>
+			<table id="pre_next_table">
+				<tr>
+					<td>이전글</td>
+					<td>
+						<c:choose>
+							<c:when test="${ec_prev_next.prevtitle eq '이전글이 없습니다'}">
+								<span style="color: gray;">이전글이 없습니다.</span>
+							</c:when>
+							<c:otherwise>
+								<span><a href="ec_view?title=${ec_prev_next.prevnum }">${ec_prev_next.prevtitle }</a></span>
+							</c:otherwise>
+						</c:choose>
+					</td>
+				</tr>
+				<tr>
+					<td>다음글</td>
+					<td>
+						<c:choose>
+							<c:when test="${ec_prev_next.prevtitle eq '다음글이 없습니다'}">
+								<span style="color: gray;">다음글이 없습니다.</span>
+							</c:when>
+							<c:otherwise>
+								<span><a href="ec_view?title=${ec_prev_next.nextnum }">${ec_prev_next.nexttitle }</a></span>
+							</c:otherwise>
+						</c:choose>
+					</td>
+				</tr>
+			</table>
+		</div>	
+		
 		<div id="listbtn-container">
 			<button id="listbtn" onclick="list();">목록</button>
 		</div>

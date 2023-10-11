@@ -101,8 +101,8 @@
 		<tr>
 			<td><a class="name" href="user/caraccident_percnt"><img src="resources/img/caraccident.png" alt="#" width="225px" height="225px"><br />남기문</a></td>
 			<td><a class="name" href="user/s_info_disability_fac"><img src="resources/img/subway_img/Subway_train.png" alt="#" width="225px" height="225px"><br />송경미</a></td>
-			<td><a class="name" href="user/parking"><img src="resources/img/MyPage.png" alt="#" width="225px" height="225px"><br />신재환</a></td>
-			<td><a class="name" href="#"><img src="resources/img/bicycle.jpg" alt="#" width="225px" height="220px"><br />임찬규</a></td>
+			<td><a class="name" href="user/parking"><img src="resources/img/parking.png" alt="#" width="225px" height="225px"><br />신재환</a></td>
+			<td><a class="name" href="user/new_mem23"><img src="resources/img/bicycle.jpg" alt="#" width="225px" height="220px"><br />임찬규</a></td>
 		</tr>
 	</table>
 	

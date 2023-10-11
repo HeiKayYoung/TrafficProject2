@@ -155,8 +155,8 @@
  	<div id="list-box">
 		<table>
 			<tr>
-				<td><a href="http://localhost:8090/traffic/user/parking">서울시 공영주차장</a></td>
-				<td><a href="http://localhost:8090/traffic/user/electric_charge">서울시 전기차 충전소</a></td>
+				<td><a href="parking">서울시 공영주차장</a></td>
+				<td><a href="electric_charge">서울시 전기차 충전소</a></td>
 			</tr>
 		</table>
 	</div>
