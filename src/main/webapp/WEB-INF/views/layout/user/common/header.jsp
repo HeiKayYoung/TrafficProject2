@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	
-	<link rel="stylesheet" href="resources/layout/tile_css/subheaderstyle.css" type="text/css"/>
+	<!-- <link rel="stylesheet" href="resources/layout/tile_css/subheaderstyle.css" type="text/css"/> -->
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 		

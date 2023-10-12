@@ -135,10 +135,10 @@
 		function topmenu_click(gubun){
 			
 			if(gubun == 'year'){
-				location.replace("caraccident_percnt?searchType=year")
+				location.replace("caraccident_percnt?searchType=year&searchYearCd=2022")
 			}
 			else{
-				location.replace("caraccident_percnt?searchType=age")
+				location.replace("caraccident_percnt?searchType=age&searchAgeCd=12세이하")
 			}
 		}
 		

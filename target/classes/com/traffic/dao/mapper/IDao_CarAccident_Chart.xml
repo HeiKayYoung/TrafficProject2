@@ -9,7 +9,7 @@
 	
 		SELECT CODE
 		          ,CODENAME
-		FROM  TMSTCODE WHERE GRPCODE = 5
+		FROM  TMSTDATA WHERE GRPCODE = 5
 	
 	</select>
 	
@@ -17,7 +17,7 @@
 	
 		SELECT 	SUBCODE
 					,SUBCODENAME
-		FROM 	TMSTCODE
+		FROM 	TMSTDATA
 		WHERE 	GRPCODE = 6
 		AND 		CODE = #{param1}
 	
@@ -27,7 +27,7 @@
 		
 		SELECT 	CODE
 					,CODENAME
-		FROM 	TMSTCODE
+		FROM 	TMSTDATA
 		WHERE 	GRPCODE = 4
 	
 	</select>
