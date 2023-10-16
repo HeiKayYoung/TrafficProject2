@@ -1,4 +1,0 @@
-1. 최근 6개년 교통사고 조회 (traffic/user/caraccident_percnt)
-2. 지자체별 사고 통계 (traffic/user/caraccident_chart)
-3. 지자체별 사고다발지역 TOP 3 (traffic/user/caraccident_top3)
-4. 실시간 교통사고 / 재난 정보 (traffic/user/caraccident_eventinfo)
