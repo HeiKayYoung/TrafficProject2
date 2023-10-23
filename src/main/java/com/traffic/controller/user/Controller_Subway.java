@@ -13,6 +13,8 @@ import com.traffic.service.main.Service_subway_airquality_user;
 import com.traffic.service.main.Service_subway_disabil_fac;
 import com.traffic.service.main.Service_subway_safety_detail;
 import com.traffic.service.main.Service_subway_safety_info;
+import com.traffic.service.main.Service_subway_safety_info_cn;
+import com.traffic.service.main.Service_subway_safety_info_en;
 
 @Controller
 @RequestMapping("user")
@@ -40,6 +42,26 @@ public class Controller_Subway {
 
 		return "traffic/ssafety_info";
 
+	}
+	
+	@RequestMapping("/ssafety_info_en")
+	public String ssafety_info_en(Model model) {
+		
+		service = new Service_subway_safety_info_en(sqlSession);
+		service.execute(model);
+		
+		return "traffic/ssafety_info_en";
+		
+	}
+	
+	@RequestMapping("/ssafety_info_cn")
+	public String ssafety_info_cn(Model model) {
+		
+		service = new Service_subway_safety_info_cn(sqlSession);
+		service.execute(model);
+		
+		return "traffic/ssafety_info_cn";
+		
 	}
 
 	@RequestMapping("/ssafety_info_detail")

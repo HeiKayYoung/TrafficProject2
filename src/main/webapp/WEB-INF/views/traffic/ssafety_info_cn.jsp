@@ -15,17 +15,18 @@
 	height: 100%;
 }
 </style>
-<h3>지하철 안전정보 
+<h3>地铁安全信息
 
 <span><button type="button" onclick="location.href='ssafety_info' " >한국어</button></span>
 <span><button type="button" onclick="location.href='ssafety_info_en' " >English</button></span>
 <span><button type="button" onclick="location.href='ssafety_info_cn' "  >汉语</button></span>
 
+
 </h3>
 <hr />
 
 
-<h5 style="color: gray;">지하철의 안전 관련 소식들과 유용한 정보들을 한곳에서 확인하세요.</h5>
+<h5 style="color: gray;">有关地铁安全的信息，和坐地铁的提示。</h5>
 	<div class="tb">
 		<table class="tg" style="table-layout: fixed; width: 1000px">
 			<colgroup>
@@ -38,11 +39,11 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<th>번호</th>
-					<th>제목 </th>
+					<th>数</th>
+					<th>标题 </th>
 					
-					<th>작성일</th>
-					<th>조회수</th>
+					<th>发表于</th>
+					<th>阅读次数</th>
 				</tr>           
 			</thead>
 			<tbody>
