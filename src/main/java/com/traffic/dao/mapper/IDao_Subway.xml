@@ -4,15 +4,7 @@
 
 <!-- (namespace) 인터페이스 경로 -->
 <mapper namespace="com.traffic.dao.user.IDao_Subway">
-<!-- 	<select id="airqulity" resultType="com.traffic.dto.user.DTO_Subway">
-		<![CDATA[
-		SELECT * FROM 
-		(SELECT S_DISTRICT, S_LINE, S_NAME, S_PDUST, S_CO2,		S_H2CO,		S_CO,
-		TRUNC(((S_PDUST/150)+(S_CO2/1000)+(S_H2CO/120)+(S_CO/10)),3)TOTAL
-		FROM SAIRQUALITY
-		ORDER BY TOTAL) WHERE ROWNUM<=10
-		]]>
-	</select> -->
+
 <select id="airqulity"
 	resultType="com.traffic.dto.user.DTO_Subway">
 		<![CDATA[
@@ -132,10 +124,7 @@ SELECT ROUTE,STATN_NM,WL_NV,WL_LOCA,WL_ML FROM SABLI_WL
 ORDER BY ROUTE
 </select>
 
-<!-- <select id="scongestion_info" resultType="com.traffic.dto.user.DTO_Subway_congestion">
-SELECT STATN_LINK, Time8 FROM SCONGESTION
-</select>
- -->
+
 <select id="scongestion_info" resultType="com.traffic.dto.user.DTO_Subway_congestion">
     SELECT STATN_LINK,
     

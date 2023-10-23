@@ -260,6 +260,7 @@
                         <div class="text">
                               <a href="ssafety_info" class="menu" id="info">지하철안전정보</a> <br><br>
                               <a href="sairquality" class="menu" id="info">지하철공기질</a> <br><br>
+                              <a href="scongestion" class="menu" id="info">지하철혼잡도</a> <br><br>
                               <a href="s_info_disability_fac" class="menu" id="info">편의시설정보</a>
                         </div>
                      </li>

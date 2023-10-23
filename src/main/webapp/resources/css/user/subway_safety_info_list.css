@@ -66,14 +66,13 @@ td:nth-child(2){
 
 
 
-[type=button]{
+.rt input[type=button]{
 	background-color: purple;
 	width: 100px;
 	height: 30px;
 	color: white;
 	border: none;
 	border-radius: 7px;
-	font-size: 20px;
 	
 }
 
